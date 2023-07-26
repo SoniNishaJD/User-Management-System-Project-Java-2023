@@ -50,4 +50,9 @@ public class UserServiceImpl implements UserService{
 		return repository.existsByEmail(email);
 	}
 
+	@Override
+	public User getUserByEmail(String email) {
+		return repository.findByEmail(email);
+	}
+
 }
