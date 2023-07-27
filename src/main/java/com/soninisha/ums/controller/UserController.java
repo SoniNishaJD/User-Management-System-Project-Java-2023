@@ -28,6 +28,7 @@ public class UserController {
 	
 	private static final Object UPDATE_PROFILE = null;
 	private static final Object CHANGE_PASSWORD = null;
+	private static final Object WRONG_UNAME_PASSWORD = null;
 	private UserService service;
 
 	public UserController(UserService service) {
@@ -96,7 +97,7 @@ public class UserController {
 		} else
 
 		{
-			session.setAttribute("msg", "Wrong Username or Password...");
+			session.setAttribute("msg", WRONG_UNAME_PASSWORD );
 			return "redirect:/login";
 		}
 
